@@ -1,0 +1,7 @@
+{
+  "name": "Todo App",
+  "description": "Minimal Todo App example.",
+  "template": "https:www.wolberg.pro",
+  "featured": true,
+  "boost": true
+}

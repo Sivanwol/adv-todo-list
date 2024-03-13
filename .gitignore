@@ -11,10 +11,20 @@
 
 # next.js
 /.next/
+.turbo
 /out/
 
 # production
 /build
+
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!packages/database/.env
 
 # misc
 .DS_Store
@@ -33,4 +43,11 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
+apps/web/next-env.d.ts
+
+
+# Build Outputs
+.next/
+out/
+build
+dist
