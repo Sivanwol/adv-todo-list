@@ -13,9 +13,35 @@ generator client {
 }
 
 model User {
-  id       String  @id @default(cuid())
-  name     String
-  username String  @unique
-  email    String? @unique
-  password String?
+  id           String         @id @default(cuid())
+  name         String
+  username     String         @unique
+  email        String?        @unique
+  password     String?
+  UserTask     UserTask[]
+  UserCategory UserCategory[]
+}
+
+model UserTask {
+  id             String        @id @default(cuid())
+  userId         String
+  user           User          @relation(fields: [userId], references: [id])
+  parentId       String?
+  userCateogryId String
+  userCategory   UserCategory? @relation(fields: [parentId], references: [id])
+  title          String
+  content        String
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+model UserCategory {
+  id        String    @id @default(cuid())
+  userId    String
+  user      User      @relation(fields: [userId], references: [id])
+  parentId  String?
+  title     String
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  UserTask  UserTask[]
 }
