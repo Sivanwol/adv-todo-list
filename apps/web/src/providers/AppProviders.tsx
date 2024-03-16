@@ -27,8 +27,6 @@ export const AppProviders: FC<Props> = (props) => {
     <SessionProvider session={session} refetchInterval={0}>
       <CacheProvider value={emotionCache}>
         <NextUIProvider>
-          {/* Mui CssBaseline disabled in this example as tailwind provides its own */}
-          {/* <CssBaseline /> */}
           <ReactQueryClientProvider>{children}</ReactQueryClientProvider>
         </NextUIProvider>
       </CacheProvider>

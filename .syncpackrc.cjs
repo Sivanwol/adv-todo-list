@@ -18,7 +18,7 @@ module.exports = {
             "label": "apps",
             "dependencyTypes": ["dev", "prod"],
             "dependencies": ["**"],
-            "packages": ["*-app"]
+            "packages": ["*-pages"]
         },
         {
             "range": "^",

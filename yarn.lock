@@ -11484,6 +11484,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"i18next@npm:23.10.1":
+  version: 23.10.1
+  resolution: "i18next@npm:23.10.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10c0/e9cd7565cc14fec53bcf872707a2c85b255804866f436ce08a3de6b2bf84209c61b7a7870ac87c1c27de39b5d8407b72b5231d99769d200b136db023abaa8795
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -17312,6 +17321,7 @@ __metadata:
     graphql: "npm:16.8.1"
     graphql-jit: "npm:0.8.4"
     graphql-yoga: "npm:5.2.0"
+    i18next: "npm:23.10.1"
     is-ci: "npm:3.0.1"
     jsdom: "npm:24.0.0"
     next: "npm:14.1.3"

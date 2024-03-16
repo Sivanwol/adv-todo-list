@@ -14,7 +14,7 @@ export const defaultLocale = 'en';
 export default {
   i18n: {
     defaultLocale,
-    locales: ['en', 'fr'],
+    locales: ['en'],
   },
   saveMissing: false,
   strictMode: true,
