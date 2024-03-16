@@ -6,10 +6,6 @@
     "apps/*",
     "packages/*"
   ],
-  "prisma": {
-    "schema": "packages/database/prisma/schema.prisma",
-    "seed": "tsx packages/database/src/seed.ts"
-  },
   "scripts": {
     "check:git-pristine": "./scripts/check-git-pristine.sh",
     "clean:global-cache": "rimraf ./.cache",
