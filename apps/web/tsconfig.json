@@ -1,18 +1,76 @@
 {
-  "extends": "@repo/typescript-config/nextjs.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "target": "es2017",
-    "plugins": [
-      {
-        "name": "next"
-      }
+    "baseUrl": "./src",
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "incremental": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@/config/*": [
+        "./config/*"
+      ],
+      "@/lib/*": [
+        "./lib/*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/server/*": [
+        "./server/*"
+      ],
+      "@/features/*": [
+        "./features/*"
+      ],
+      "@/layouts/*": [
+        "./layouts/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/public/*": [
+        "../public/*"
+      ],
+      "@/themes/*": [
+        "./themes/*"
+      ],
+      "@repo/common-i18n": [
+        "../../../packages/common-i18n/src/index"
+      ],
+      "@repo/common-i18n/locales/*": [
+        "../../../packages/common-i18n/src/locales/*"
+      ],
+      "@repo/database": [
+        "../../../packages/database/src/index"
+      ]
+    },
+    "types": [
+      "vitest/globals",
+      "@testing-library/jest-dom/vitest"
     ]
   },
   "include": [
+    ".eslintrc.*",
     "next-env.d.ts",
-    "next.config.mjs",
     "**/*.ts",
     "**/*.tsx",
+    "**/*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.jsx",
+    "**/*.json",
     ".next/types/**/*.ts"
   ],
   "exclude": [

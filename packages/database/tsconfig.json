@@ -1,11 +1,34 @@
 {
-  "extends": "@repo/typescript-config/base.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "lib": [
+      "esnext"
+    ],
+    "module": "ES2020",
+    "noEmit": false,
+    "incremental": true,
+    "paths": {},
+    "types": [
+      "vitest/globals"
+    ]
+  },
+  "exclude": [
+    "**/node_modules",
+    "**/.*/*",
+    "dist"
+  ],
   "include": [
+    ".eslintrc.*",
     "**/*.ts",
     "**/*.tsx",
-    "tsup.config.ts"
-  ],
-  "exclude": [
-    "node_modules"
+    "**/*.mts",
+    "**/*.js",
+    "**/*.cjs",
+    "**/*.mjs",
+    "**/*.jsx",
+    "**/*.json"
   ]
 }
