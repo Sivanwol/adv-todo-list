@@ -14,6 +14,12 @@
         "!.next/cache/**"
       ]
     },
+    "codegen": {
+      // Codegen caching might also be disabled and enabled by workspace (see packages/db-main-prisma/turbo.json)
+      // as generated code location might vary between toolings
+      "cache": true,
+      "outputs": ["src/generated/**"]
+    },
     "db:migrate:deploy": {},
     "db:migrate:dev": {},
     "db:push": {},

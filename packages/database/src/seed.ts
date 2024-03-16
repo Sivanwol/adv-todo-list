@@ -1,36 +1,20 @@
-import {prisma} from './client';
+import { PrismaClientDbMain } from '.';
+// import { PoemSeeds, UserSeeds } from '../src/seeds';
 
-import type {User} from "@prisma/client";
+const prisma = new PrismaClientDbMain();
 
-const DEFAULT_USERS = [
-  // Add your own user to pre-populate the database with
-  {
-    name: "Tim Apple",
-    email: "tim@apple.com",
-  },
-] as Array<Partial<User>>;
+async function main() {
+  console.log(`Start seeding ...`);
 
-(async () => {
-  try {
-    await Promise.all(
-      DEFAULT_USERS.map((user) =>
-        prisma.user.upsert({
-          where: {
-            email: user.email!,
-          },
-          update: {
-            ...user,
-          },
-          create: {
-            ...user,
-          },
-        })
-      )
-    );
-  } catch (error) {
-    console.error(error);
+
+  console.log(`Seeding finished.`);
+}
+
+main()
+  .catch((e) => {
+    console.error(e);
     process.exit(1);
-  } finally {
+  })
+  .finally(async () => {
     await prisma.$disconnect();
-  }
-})();
+  });
