@@ -45,6 +45,7 @@
     "@commitlint/config-conventional": "19.1.0",
     "@repo/eslint-config": "workspace:^",
     "husky": "9.0.11",
+    "npm-run-all2": "6.1.2",
     "prettier": "^3.2.5",
     "rimraf": "5.0.5",
     "syncpack": "12.3.0",
