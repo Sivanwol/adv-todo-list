@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "build": "echo \"Unrequired and disabled when using tsonfig paths aliases, run 'build-force' to test a build.\"",
+    "build-force": "echo \"'build-force' not working yet for prisma.\"",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --fix",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.cjs,.mjs --cache --cache-location ../../.cache/eslint/db-main-prisma.eslintcache --max-warnings 0",
     "clean": "rimraf ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "codegen": "rimraf ./src/generated && prisma generate",
     "db:generate": "prisma generate",
     "db:generate:force": "rimraf ./src/generated && prisma generate",
     "db:sync": "dotenv-flow -- yarn prisma db pully",

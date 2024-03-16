@@ -8,7 +8,7 @@ import {AppProviders} from '../providers/AppProviders';
 
 /**
  * Import global styles, global css or polyfills here
- * i.e.: import '@/assets/theme/style.scss'
+ * i.e.: import '@/asserts/theme/style.scss'
  */
 import '../styles/global.css';
 

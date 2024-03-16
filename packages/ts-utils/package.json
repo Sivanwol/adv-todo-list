@@ -1,0 +1,47 @@
+{
+  "name": "@repo/ts-utils",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "echo \"Unrequired and disabled when using tsonfig paths aliases, run 'build-force' to test a build.\"",
+    "build-force": "tsup",
+    "check-dist": "es-check -v",
+    "check-size": "size-limit",
+    "clean": "rimraf ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "dev": "tsup --watch",
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/ts-utils.eslintcache",
+    "test": "vitest run",
+    "test-unit": "vitest run",
+    "test-unit-watch": "vitest watch --ui",
+    "typecheck": "tsc --project ./tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:^",
+    "@size-limit/file": "11.1.1",
+    "@types/node": "20.11.28",
+    "@vitest/coverage-v8": "1.4.0",
+    "cross-env": "7.0.3",
+    "es-check": "7.1.1",
+    "eslint": "8.57.0",
+    "get-tsconfig": "4.7.3",
+    "rimraf": "5.0.5",
+    "size-limit": "11.1.1",
+    "tslib": "2.6.2",
+    "typescript": "5.4.2",
+    "vite": "5.1.6",
+    "vite-tsconfig-paths": "4.3.2",
+    "vitest": "1.4.0"
+  },
+  "engines": {
+    "node": ">=18.17"
+  }
+}

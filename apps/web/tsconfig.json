@@ -53,6 +53,9 @@
       ],
       "@repo/database": [
         "../../../packages/database/src/index"
+      ],
+      "@repo/ts-utils": [
+        "../../../packages/ts-utils/src/index"
       ]
     },
     "types": [
